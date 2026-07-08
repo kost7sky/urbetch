@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>    
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Urbetch burguês</title>
@@ -8,17 +8,24 @@
       name="description"
       content="Um livro curto para pessoas ativas que pensam demais e não querem respostas prontas. Nove cafés, nove perguntas, nenhuma fórmula pronta."
     />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQSVJLJGC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YPQSVJLJGC');
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('[data-ga-event]');
+        if (!link || typeof gtag !== 'function') return;
+        gtag('event', link.dataset.gaEvent, {
+          link_text: link.textContent.trim(),
+          link_url: link.href
+        });
+      });
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQSVJLJGC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YPQSVJLJGC');
-</script>
   <body>
     <header class="site-header" aria-label="Topo">
       <a class="brand" href="#topo">Urbetch burguês</a>
@@ -38,8 +45,8 @@
             autonomia e o barulho do mundo moderno. Nenhuma resposta pronta.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
-            <a class="button primary" href="https://drive.google.com/file/d/1KFKnwinX4ZlY4uExMl0uKNinPe4b7w20/view?usp=sharing&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=sample_main">Ler um trecho</a>
-            <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_hero">Receber os cafés</a>
+            <a class="button primary" data-ga-event="sample_open" href="https://drive.google.com/file/d/1KFKnwinX4ZlY4uExMl0uKNinPe4b7w20/view?usp=sharing&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=sample_main">Ler um trecho</a>
+            <a class="button secondary" data-ga-event="lead_form_click" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_hero">Receber os cafés</a>
           </div>
         </div>
       </section>
@@ -65,7 +72,7 @@
           <img class="cover-main" src="assets/cover-brazil-a5-tight.jpg" alt="Capa brasileira do livro Urbetch burguês" />
           <figcaption>
             Edição brasileira de Konstantin Khudiakôv. Original russo:
-            <a href="https://ridero.ru/books/meshanskii_urbech" lang="ru">Мещанский урбеч</a>.
+            <a data-ga-event="russian_original_click" href="https://ridero.ru/books/meshanskii_urbech" lang="ru">Мещанский урбеч</a>.
           </figcaption>
         </figure>
       </section>
@@ -128,7 +135,7 @@
               Abra o prólogo e as primeiras perguntas antes de decidir. É o
               convite mais leve para entrar no clima do livro.
             </p>
-            <a class="button primary" href="https://drive.google.com/file/d/1KFKnwinX4ZlY4uExMl0uKNinPe4b7w20/view?usp=sharing&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=sample_section">Ler agora</a>
+            <a class="button primary" data-ga-event="sample_open" href="https://drive.google.com/file/d/1KFKnwinX4ZlY4uExMl0uKNinPe4b7w20/view?usp=sharing&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=sample_section">Ler agora</a>
           </article>
           <article class="pathway-card">
             <p class="pathway-label">02 · Ler hoje</p>
@@ -137,7 +144,7 @@
               Para quem quer começar sem esperar entrega: compra digital pela
               Editora Imagina e leitura imediata.
             </p>
-            <a class="button secondary" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs-1?utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=buy_ebook">Comprar e-book</a>
+            <a class="button secondary" data-ga-event="ebook_buy_click" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs-1?utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=buy_ebook">Comprar e-book</a>
           </article>
           <article class="pathway-card">
             <p class="pathway-label">03 · Levar à mesa</p>
@@ -146,7 +153,7 @@
               Melhor para cafés, clubes de leitura, presentes e encontros
               presenciais da série 9 cafés, 9 perguntas.
             </p>
-            <a class="button secondary" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs?utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=buy_print">Comprar impresso</a>
+            <a class="button secondary" data-ga-event="print_buy_click" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs?utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=buy_print">Comprar impresso</a>
           </article>
         </div>
       </section>
@@ -171,8 +178,8 @@
           </article>
         </div>
         <div class="lead-actions" aria-label="Canais de interesse">
-          <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_reader">Quero participar</a>
-          <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_partner">Tenho um café/espaço</a>
+          <a class="button primary" data-ga-event="lead_form_click" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_reader">Quero participar</a>
+          <a class="button secondary" data-ga-event="lead_form_click" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=landing&utm_medium=cta&utm_content=lead_partner">Tenho um café/espaço</a>
         </div>
         <p class="form-note">
           O formulário recebe inscrições de pessoas leitoras, cafés, espaços
@@ -184,9 +191,9 @@
     <footer class="site-footer">
       <p>Urbetch burguês / Мещанский урбеч</p>
       <p class="footer-links">
-        <a href="https://taplink.cc/kost7sky">Página do autor</a>
+        <a data-ga-event="author_page_click" href="https://taplink.cc/kost7sky">Página do autor</a>
         <span aria-hidden="true">·</span>
-        <a href="https://www.youtube.com/watch?v=8ST_zcP6rTc">Vídeo</a>
+        <a data-ga-event="author_video_click" href="https://www.youtube.com/watch?v=8ST_zcP6rTc">Vídeo</a>
         <span aria-hidden="true">·</span>
         <a href="mailto:kost7sky@inbox.ru">Contato</a>
       </p>

@@ -8,7 +8,23 @@
       name="description"
       content="Trecho inicial de Urbetch burguês: apresentação, prólogo e 9 perguntas para a série de conversas em Natal."
     />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQSVJLJGC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YPQSVJLJGC');
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('[data-ga-event]');
+        if (!link || typeof gtag !== 'function') return;
+        gtag('event', link.dataset.gaEvent, {
+          link_text: link.textContent.trim(),
+          link_url: link.href
+        });
+      });
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Topo">
@@ -30,9 +46,9 @@
           <strong>9 cafés, 9 perguntas</strong>.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs-1?utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=buy_ebook_sample_page">Comprar e-book</a>
-          <a class="button secondary" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs?utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=buy_print_sample_page">Comprar impresso</a>
-          <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=lead_sample_page">Receber notícias</a>
+          <a class="button primary" data-ga-event="ebook_buy_click" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs-1?utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=buy_ebook_sample_page">Comprar e-book</a>
+          <a class="button secondary" data-ga-event="print_buy_click" href="https://www.imaginaeditora.com/product-page/urbetch-burgu%C3%AAs?utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=buy_print_sample_page">Comprar impresso</a>
+          <a class="button secondary" data-ga-event="lead_form_click" href="https://docs.google.com/forms/d/e/1FAIpQLSd4cilN8NzM5aMLvuM5T4M8hSEEgSHhuiCVSwaOtY0AEvKa4w/viewform?usp=publish-editor&utm_campaign=urbetch_natal_phase0&utm_source=trecho&utm_medium=cta&utm_content=lead_sample_page">Receber notícias</a>
         </div>
       </section>
 
@@ -111,7 +127,7 @@
       <p class="footer-links">
         <a href="index.html">Voltar à página principal</a>
         <span aria-hidden="true">·</span>
-        <a href="https://ridero.ru/books/meshanskii_urbech">Original russo</a>
+        <a data-ga-event="russian_original_click" href="https://ridero.ru/books/meshanskii_urbech">Original russo</a>
       </p>
     </footer>
   </body>
